@@ -11,6 +11,11 @@
     .m-left-images {
         margin-left: 236px;
     }
+    .BG {
+        background-color: aliceblue;
+        width: 100%;
+        height: 100%
+    }
 /*Navigation*/
     .topNav {
         background-color: #723144;
@@ -21,28 +26,70 @@
         flex: inline-block;
     }
     .sideNav {
-        background-color: burlywood;
-        float:right;
-
+       /* background-color: burlywood;*/
+        /*float:right;*/
+        width:10%;
+        position: absolute;
+        right: 0px;
+        /*top: 0px*/
+   
+     
     }
     .sideNav ul{
         list-style-type: none;
-        padding: 10px;
-        margin: 10px;
+        /*padding: 10px;
+        margin: 10px;*/
         overflow: hidden;  
     }
     .sideNav a {
         text-decoration: none;
+        font-weight: bold;
+        padding: 5px;
+        align-items: baseline;
+        justify-content: center;
+        color: #723144
+        
     }
+    .sideNav li {
+       /* width: 229px;
+        height: 51px;*/
+        line-height: 51px;
+        vertical-align: middle;
+    }
+    .sideNav li:hover {
+        background-color: #E67D5F;
+        text-decoration: underline;
+    }
+
+/*Colours*/
+.mainBG {
+    background-color: #F5E4CA;
+}
+.col1 {
+    background-color: #D79778;
+}
+.col2 {
+    background-color: #F0B19F;
+}
+.col3 {
+    background-color: #C6ABB3;
+}
+.col4 {
+    background-color: #DFAC93;
+}
+
 /*Page Content */
     .pageBody {
-        background-color: green;
+        /*background-color: green;*/
         float: left;
         flex-grow:1;
+        width: 90%;
+        
     }
     .mainBody {
         display: flex;  
         flex-direction: row;
+        width: 90%;
     }
     .pageHeader { 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,23 +99,51 @@
         padding:50px;
     }
     .portfolioPage {
-        background-color: blueviolet;
+       /* display: grid;*/
+        /*background-color: #E67D5F;*/
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "firstRow" 
+        "secondRow";
+        grid-template-rows: 1fr 1fr;
+        
     }
     .portfolioElement {
-        align-items: left;
-        /*margin-left: 50px;*/
+        /*align-items: left;*/
+        margin-left: 50px;
         padding: 10px;
-        display: inline-block;
+        /* width: 100%; */
+        
+                /*display: inline-block;
+        justify-content: space-around;*/
+    }
+    .portfolioMargin {
+        margin: 50px;
+    
     }
     .firstRow {
-        display: block;
-    }
+        display: flex;
+        grid-area: firstRow;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    
+            }
     .secondRow {
-        display: block;
+        display: flex;
+        grid-area: secondRow;
+        justify-content: space-evenly;
+        align-items: center;
     }
+    .margin50 {
+        padding-left:70px;
+    }
+
 /* Typography */
     h1 {
         font-family: quicksand;
+        
     }
     .intro {
         font-size: x-large;
@@ -85,6 +160,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     }
+
 /*Images*/
     .logo {
         max-width: 100px;
@@ -97,8 +173,24 @@
         display: inline-block;
         margin-bottom: 10px;
     }
+
 /*Footer*/
     footer {
         background-color: aqua;
-        clear:both;
+        align-items:end;
     }
+
+/*Media Query*/
+@media screen and (max-width: 600px) { 
+    .portfolioPage {
+    display: block;
+     /*background-color: #E67D5F;*/
+     width: 100%;
+     /* grid-template-columns: 1fr;
+     grid-template-areas: 
+     "firstRow" 
+     "secondRow";
+     grid-template-rows: 1fr;
+      */
+ }
+}
