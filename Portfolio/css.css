@@ -7,6 +7,9 @@
     }
     body {
         background-color: grey;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     .m-left-images {
         margin-left: 236px;
@@ -14,7 +17,7 @@
     .BG {
         background-color: aliceblue;
         width: 100%;
-        height: 100%
+        min-height: 100vh;
     }
 /*Navigation*/
     .topNav {
@@ -64,6 +67,7 @@
 /*Colours*/
 .mainBG {
     background-color: #F5E4CA;
+    
 }
 .col1 {
     background-color: #D79778;
@@ -90,6 +94,7 @@
         display: flex;  
         flex-direction: row;
         width: 90%;
+        
     }
     .pageHeader { 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -107,6 +112,7 @@
         "firstRow" 
         "secondRow";
         grid-template-rows: 1fr 1fr;
+        height: 85%;
         
     }
     .portfolioElement {
@@ -176,8 +182,14 @@
 
 /*Footer*/
     footer {
-        background-color: aqua;
-        align-items:end;
+        margin-top: auto;
+        background-color: #C6ABB3;
+        position:absolute;
+        bottom:0;
+        width: 100%;
+        /* align-items:end; */
+        /* flex: 30vh;
+        padding: 20px; */
     }
 
 /*Media Query*/

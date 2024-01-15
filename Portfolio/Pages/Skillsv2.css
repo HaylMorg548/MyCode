@@ -159,6 +159,38 @@ background-color: #DFAC93;
     grid-template-rows: 1fr;
 }
 
+/*Accordian*/
+.accordianHeader {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C6ABB3;
+    cursor: pointer;
+    transition: background-color .3s;
+
+}
+.accordianHeader:hover {
+    background-color: #E67D5F;
+}
+
+.accordianHeader button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding-right: 20px;
+}
+
+.accordianBody {
+    padding: 1rem;
+    background-color: #D79778;
+    display: none;
+}
+
+.accordian.active .accordianBody {
+    display: grid;
+}
+
 /* Typography */
 h1 {
     font-family: quicksand;
